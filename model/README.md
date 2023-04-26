@@ -1,0 +1,1 @@
+Global Information emBedding block
