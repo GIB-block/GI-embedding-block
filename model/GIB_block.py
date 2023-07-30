@@ -20,8 +20,8 @@ class Global_Information_emBedding(nn.Module):
                                  nn.Sigmoid(),
                                  )
 
-        self.pool_h = nn.AdaptiveMaxPool2d((1, None))
-        self.pool_w = nn.AdaptiveMaxPool2d((None, 1))
+        self.pool_h = nn.AdaptiveAvgPool2d((1, None))
+        self.pool_w = nn.AdaptiveAvgPool2d((None, 1))
 
     def forward(self, X):
         X_h = self.pool_h(X).squeeze(2)
